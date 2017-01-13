@@ -1,0 +1,19 @@
+<div class="pull-right">
+  <%= link_to("发布新职位", new_admin_job_path, :class => "btn btn-primary" ) %>
+</div>
+<table class="table table-boldered table-hover">
+  <% @jobs.each do |job| %>
+  <tr>
+    <td>
+      <%= link_to(job.title, admin_job_path(job)) %>
+    </td>
+    <td>
+       <%= link_to edit_admin_job_path(job), class: "btn btn-xs btn-info" do %><i class="fa fa-pencil"></i><% end %>
+       <%= link_to admin_job_path(job), :method => :delete, :class => "btn btn-xs  btn-danger", :data => { :confirm => "Are you sure?" } do %><i class="fa fa-trash-o"></i><% end %>
+    </td>
+    <td>
+      <%= job.created_at %>
+    </td>
+  </tr>
+  <% end %>
+</table>

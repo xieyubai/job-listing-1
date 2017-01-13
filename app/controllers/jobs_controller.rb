@@ -1,6 +1,13 @@
 class JobsController < ApplicationController
    before_action :authenticate_user!, only: [:new, :create, :update, :edit, :destroy]
 
+   def require_is_admin
+     if !current_user.admin?
+       flash[:alert] = '你不是管理员账号'
+       redirect_to root_path
+     end
+   end
+
   def show
     @job = Job.find(params[:id])
   end
