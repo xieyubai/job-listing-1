@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :resumes
  end
 
+
     resources :jobs
     root 'jobs#index'
 
@@ -14,6 +15,7 @@ Rails.application.routes.draw do
         post :publish
         post :hide
       end
+      resources :resumes
     end
   end
 end
