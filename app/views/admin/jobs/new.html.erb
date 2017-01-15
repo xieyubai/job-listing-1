@@ -1,15 +1,5 @@
 <h1>发布新职位</h1>
 
-<%= simple_form_for [:admin,@job] do |f| %>
-<div class="form-group">
-<%= f.input :title %>
-<%= f.input :description %>
-<%= f.input :wage_lower_bound, :label => "薪资下限" %>
-<%= f.input :wage_upper_bound, :label => "薪资上限" %>
-<%= f.input :contact_email %>
-<%= f.input :is_hidden %>
-</div>
+<hr>
 
-<%= f.submit "提交", class: "btn btn-primary", data: {disable_with: "Submitting..."} %>
-
-<% end %>
+   <%= render "form" %>

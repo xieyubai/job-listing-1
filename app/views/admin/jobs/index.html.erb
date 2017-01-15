@@ -4,9 +4,9 @@
 
 <br><br>
 
-<table class="table table-boldered table-hover">
-  <thead>
-        <tr>
+<table class="table table-boldered table-hover table-striped custab">
+  <thead class="active">
+        <tr class="active">
             <td>
                 职缺
             </td>
@@ -42,9 +42,9 @@
        <%= link_to admin_job_path(job), :method => :delete, :class => "btn btn-xs  btn-danger", :data => { :confirm => "Are you sure?" } do %><i class="fa fa-trash-o"></i><% end %>
        <% if job.is_hidden %>
 
-    <%= link_to("Publish", publish_admin_job_path(job),:method => :post, :class => "btn btn-xs btn-default") %>
+       <%= link_to publish_admin_job_path(job) , :method => :post, :class => "btn btn-xs btn-success" do %><i class="fa fa-eye"></i><% end %>
     <% else %>
-    <%= link_to("Hide", hide_admin_job_path(job),:method => :post,  :class => "btn btn-xs btn-default") %>
+    <%= link_to hide_admin_job_path(job), :method => :post,  :class => "btn btn-xs btn-warning" do %><i class="fa fa-eye-slash"></i><% end %>
   <% end %>
     </td>
     <td>
