@@ -1,20 +1,43 @@
-
-<h1> <%= @job.title %> </h1>
+<div class="job-item">
+<h1><%= @job.title %></h1>
 <div class="group label-item">
+  <span style="color:grey; font-weight:bold;"> <i class="glyphicon glyphicon-calendar"> </i> 发布日期 <%= local_time(@job.created_at, '%B %e, %Y') %> </span>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <span style="color:grey; font-weight:bold;"> <i class="glyphicon glyphicon-map-marker"></i> 远程 </span>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <span style="color:grey; font-weight:bold;">
     <span class="label label-default ">
      <span class="fa fa-rmb"></span> <%= @job.wage_lower_bound%> 元
     </span>~
     <span class="label label-default ">
-     <span class="fa fa-rmb"></span> <%= @job.wage_lower_bound%> 元
+     <span class="fa fa-rmb"></span> <%= @job.wage_upper_bound%> 元
     </span>
    </span>
 </div>
-
-<p>
-  <%= simple_format(@job.description) %>
-
-</p>
-
-<div class="text-center">
-  <%= link_to("投交履历",new_job_resume_path(@job), :style => "font-size: 30px; text-decoration:underline;") %>
+<div><%= simple_format(@job.description) %></div>
+<h4>职位描述：</h4>
+<ul>
+  <li>2年以上 Ruby 开发经验, 1年以上 Ruby on Rails 开发经验；</li>
+  <li>有编写自动化测试用例的习惯；</li>
+  <li>有扎实的编程功底, 熟悉数据结构和算法；</li>
+  <li>有过 Sinatra, Padrino 或 Grape 框架下的开发经验者优先；</li>
+  <li> 熟悉 redis, MongoDB 之类的 NoSQL 数据仓库者优先；</li>
+  <li>理解框架运作原理者优先。</li>
+</ul>
+<h4>加入我们，你将会得到什么：</h4>
+<ul>
+  <li>全球化技术视野，出国出差机会</li>
+  <li>结对编程，一对一“过招”快速学习成长的机会</li>
+  <li>敏捷开发技术实践</li>
+  <li>学习型组织，书海遨游，session多多，有饭有Fun</li>
+  <li>精彩纷呈的各类专属社区活动，等待你的参与分享
+  </li>
+  <li>努力实现梦幻般的男女1：1工作环境
+ </li>
+ </ul>
+<br>
+<br>
+<div class="text-center send-resume">
+  <%= link_to("投简历", new_job_resume_path(@job), :class => "btn btn-primary btn-lg") %>
+</div>
 </div>
