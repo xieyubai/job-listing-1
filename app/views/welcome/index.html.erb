@@ -1,7 +1,38 @@
 <div class="jumbotron">
     <h1 class="title">识伯乐</h1>
 
-    <p class="slogan">从此，你不在是孤军奋战。
+    <p class="slogan">我们提供的，不仅仅是阶梯。
      </p>
-    <p class="lead"><a class="btn btn-danger  btn-lg" href="/jobs">马上应征</a></p>
+    <p class="lead"><a class="btn btn-danger  btn-lg" href="/jobs">加入我们</a></p>
+  </div>
+  <%= form_tag jobs_path, :method => "get" do %>
+  <div class="searchform">
+          <%= text_field_tag :search, params[:search], placeholder: "搜索职位", class: "searchbox"%>
+          <span>
+              <%= submit_tag "搜索", :title => nil, :description => nil, class: "mike" %>
+              <!-- <input type="submit" value="点 击" class="mike"> -->
+           </span>
+      </div>
+  <% end %>
+
+  <div class="container">
+  	<div class="row">
+  		<div class="span3">
+              <div class="well">
+          		<h2 class="muted">Ruby工程师</h2>
+          		<p><span class="label label-success">POPULAR</span></p>
+          		<ul>
+          			<li>2年以上 Ruby 开发经验, 1年以上 Ruby on Rails 开发经验；</li>
+          			<li>有编写自动化测试用例的习惯；</li>
+          			<li>有扎实的编程功底, 熟悉数据结构和算法；</li>
+          			<li>有过 Sinatra, Padrino 或 Grape 框架下的开发经验者优先；</li>
+          		</ul>
+              <p>全球化技术视野，出国出差机会</p>
+           		<h3>$18K / month</h3>
+          		<hr>
+          		<p><a class="btn btn-lg btn-danger btn-large" href="/jobs"><i class="icon-ok"></i>立即应聘</a></p>
+          	</div>
+          </div>
+
+  	</div>
   </div>

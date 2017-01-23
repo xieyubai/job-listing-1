@@ -46,15 +46,16 @@
 }
 
 .jumbotron {
-  background-image:url('https://image.shutterstock.com/z/stock-photo-fist-bump-colleagues-collaboration-teamwork-concept-444269305.jpg');
+  background-image:url('https://ww4.sinaimg.cn/large/006tNc79gy1fc0lpc93ghj319q0m1gwa.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 320px;
+  padding-bottom: 300px;
 }
 
 .title {
   font-family: "Helvetica Neue", "Microsoft Yahei", 微软雅黑;
-  text-align: center;
+  text-align: left;
+  line-height: 1.2;
   margin-top: 200px;
   margin-bottom: 80px;
 }
@@ -62,14 +63,14 @@
 .slogan {
   margin-top: 20px;
   margin-bottom: 50px;
-  text-align: center;
+  text-align: left;
   color: black;
   top: 12px;
 }
 
 .lead {
   margin-bottom: 60px;
-  text-align: center;
+  text-align: left;;
   color: white;
 }
 
@@ -85,4 +86,34 @@ div {
   &.field, &.actions {
     margin-bottom: 10px;
   }
+}
+
+.searchform{
+  position: relative;
+  height: 100%;
+  width: 540px;
+  min-height: 100px;
+  margin: 80px auto 0 auto;
+  text-align: left;
+}
+.searchbox{
+  float: left;
+  width: 421px;
+  height: 38px;
+  padding: 9px 7px;
+  font: 16px arial;
+  border: 1px solid #b8b8b8;
+
+}
+.mike {
+    float: auto;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #60af00;
+    width: 86px;
+    height: 38px;
+    border: 1px solid #5d9b4d;
+    font-size: 14px;
+    font-family: simsun;
 }
