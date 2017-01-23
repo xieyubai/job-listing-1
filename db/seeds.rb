@@ -1,6 +1,6 @@
 puts "這個種子檔會自動建立一個admin帳號, 並且創建 10 個 public jobs, 以及10個hidden jobs"
 
-create_account = User.create([email: 'example@gmail.com', password: '12345678', password_confirmation: '12345678', is_admin: 'true'])
+create_account = User.create([email: '52214272@qq.com', password: '12345678', password_confirmation: '12345678', is_admin: 'true'])
 puts "Admin account created."
 
 create_jos = for i in 1..10 do
